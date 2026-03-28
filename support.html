@@ -1,204 +1,217 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BatchMark 技术支持</title>
+    <title>BatchMark Support</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #764ba2;
-            font-size: 1.5em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
-        }
-        h3 {
-            color: #555;
-            font-size: 1.2em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .contact-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 25px 0;
-        }
-        .contact-box a {
-            color: white;
-            font-size: 1.3em;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-        .faq-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 4px solid #667eea;
-        }
-        .faq-item h3 {
-            margin-top: 0;
-            color: #667eea;
-        }
-        ol, ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        li {
-            margin: 8px 0;
-        }
-        .format-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .format-tag {
-            background: #667eea;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #999;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #667eea;
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .lang-switch { text-align: right; margin-bottom: 30px; }
+        .lang-switch button { background: #f0f0f0; border: none; padding: 8px 16px; margin-left: 8px; cursor: pointer; border-radius: 4px; }
+        .lang-switch button.active { background: #007AFF; color: white; }
+        h1 { font-size: 28px; margin-bottom: 10px; }
+        h2 { font-size: 20px; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+        h3 { font-size: 16px; margin: 20px 0 10px; color: #555; }
+        p, li { margin-bottom: 10px; }
+        ul { margin-left: 20px; margin-bottom: 15px; }
+        .email { background: #f5f5f5; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .email a { color: #007AFF; text-decoration: none; }
+        .content { display: none; }
+        .content.active { display: block; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">← 返回首页</a>
-        <h1>🛠️ BatchMark 技术支持</h1>
-        <p class="subtitle">专业的批量图片水印与打码工具</p>
+    <div class="lang-switch">
+        <button onclick="switchLang('zh')" class="active" id="btn-zh">中文</button>
+        <button onclick="switchLang('en')" id="btn-en">English</button>
+        <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+        <button onclick="switchLang('ko')" id="btn-ko">한국어</button>
+    </div>
+
+    <!-- Chinese -->
+    <div id="zh" class="content active">
+        <h1>BatchMark 技术支持</h1>
         
-        <div class="contact-box">
-            <p>遇到问题？请联系我们</p>
-            <p style="margin-top: 10px;">
-                <a href="mailto:fc_help@163.com">📧 fc_help@163.com</a>
-            </p>
-            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.9;">我们会在 24 小时内回复您的邮件</p>
-        </div>
+        <h2>联系我们</h2>
+        <p>使用过程中遇到任何问题，请通过以下方式联系我们：</p>
+        <div class="email">技术支持邮箱：<a href="mailto:fc_help@163.com">fc_help@163.com</a></div>
+        <p>我们会在 24 小时内回复。</p>
+
+        <h2>常见问题</h2>
         
-        <h2>❓ 常见问题</h2>
-        
-        <div class="faq-item">
-            <h3>如何使用批量水印功能？</h3>
-            <ol>
-                <li>选择"水印"标签</li>
-                <li>拖拽或选择要处理的图片</li>
-                <li>配置水印文字、位置、透明度等参数</li>
-                <li>选择输出目录</li>
-                <li>点击"开始处理"</li>
-            </ol>
-        </div>
-        
-        <div class="faq-item">
-            <h3>如何使用批量打码功能？</h3>
-            <ol>
-                <li>选择"打码"标签</li>
-                <li>拖拽或选择要处理的图片</li>
-                <li>勾选需要检测的类型（人脸、手机号、身份证等）</li>
-                <li>调整打码样式和强度</li>
-                <li>选择输出目录</li>
-                <li>点击"开始处理"</li>
-            </ol>
-        </div>
-        
-        <div class="faq-item">
-            <h3>支持哪些图片格式？</h3>
-            <div class="format-list">
-                <span class="format-tag">JPG/JPEG</span>
-                <span class="format-tag">PNG</span>
-                <span class="format-tag">HEIC</span>
-                <span class="format-tag">TIFF</span>
-                <span class="format-tag">BMP</span>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <h3>如何购买 Pro 版本？</h3>
-            <p>在应用内点击 Pro 升级按钮，通过 App Store 完成一次性购买（¥35），即可永久使用所有 Pro 功能。</p>
-        </div>
-        
-        <div class="faq-item">
-            <h3>如何恢复购买？</h3>
-            <p>如果您已购买 Pro 版本但未解锁，请点击"恢复购买"按钮。</p>
-        </div>
-        
-        <h2>💻 系统要求</h2>
+        <h3>如何使用批量水印？</h3>
+        <ol>
+            <li>选择"水印"标签</li>
+            <li>拖拽或选择要处理的图片</li>
+            <li>配置水印文字、位置、透明度</li>
+            <li>选择输出目录，点击"开始处理"</li>
+        </ol>
+
+        <h3>如何使用批量打码？</h3>
+        <ol>
+            <li>选择"打码"标签</li>
+            <li>拖拽或选择要处理的图片</li>
+            <li>勾选需要检测的类型（人脸、手机号等）</li>
+            <li>调整打码样式，点击"开始处理"</li>
+        </ol>
+
+        <h3>支持哪些图片格式？</h3>
+        <p>JPG/JPEG、PNG、HEIC、TIFF、BMP</p>
+
+        <h3>如何购买 Pro 版本？</h3>
+        <p>应用内点击 Pro 升级按钮，通过 App Store 一次性购买（¥35），永久使用所有 Pro 功能。</p>
+
+        <h3>如何恢复购买？</h3>
+        <p>点击"恢复购买"按钮即可。</p>
+
+        <h2>系统要求</h2>
         <ul>
             <li>macOS 13.0 (Ventura) 或更高版本</li>
             <li>Apple Silicon (M1/M2/M3/M4) 或 Intel 处理器</li>
             <li>建议 8GB 以上内存</li>
         </ul>
-        
-        <h2>💬 反馈与建议</h2>
-        <p>我们非常重视您的反馈，请将您的建议发送至：<a href="mailto:fc_help@163.com">fc_help@163.com</a></p>
-        <p>感谢您使用 BatchMark！</p>
-        
-        <div class="footer">
-            <p>© 2026 BatchMark | 技术支持页面</p>
-        </div>
     </div>
+
+    <!-- English -->
+    <div id="en" class="content">
+        <h1>BatchMark Support</h1>
+        
+        <h2>Contact Us</h2>
+        <p>If you have any questions or issues, please contact us:</p>
+        <div class="email">Support Email: <a href="mailto:fc_help@163.com">fc_help@163.com</a></div>
+        <p>We will respond within 24 hours.</p>
+
+        <h2>FAQ</h2>
+        
+        <h3>How to use batch watermark?</h3>
+        <ol>
+            <li>Select the "Watermark" tab</li>
+            <li>Drag or select images to process</li>
+            <li>Configure watermark text, position, and opacity</li>
+            <li>Select output folder and click "Start Processing"</li>
+        </ol>
+
+        <h3>How to use batch masking?</h3>
+        <ol>
+            <li>Select the "Mask" tab</li>
+            <li>Drag or select images to process</li>
+            <li>Select detection types (face, phone number, etc.)</li>
+            <li>Adjust mask style and click "Start Processing"</li>
+        </ol>
+
+        <h3>Supported image formats?</h3>
+        <p>JPG/JPEG, PNG, HEIC, TIFF, BMP</p>
+
+        <h3>How to purchase Pro version?</h3>
+        <p>Click the Pro upgrade button in the app and purchase through App Store ($4.99 one-time) to unlock all Pro features permanently.</p>
+
+        <h3>How to restore purchase?</h3>
+        <p>Click the "Restore Purchase" button.</p>
+
+        <h2>System Requirements</h2>
+        <ul>
+            <li>macOS 13.0 (Ventura) or later</li>
+            <li>Apple Silicon (M1/M2/M3/M4) or Intel processor</li>
+            <li>8GB RAM recommended</li>
+        </ul>
+    </div>
+
+    <!-- Japanese -->
+    <div id="ja" class="content">
+        <h1>BatchMark サポート</h1>
+        
+        <h2>お問い合わせ</h2>
+        <p>ご質問や問題がある場合は、以下までご連絡ください：</p>
+        <div class="email">サポートメール：<a href="mailto:fc_help@163.com">fc_help@163.com</a></div>
+        <p>24時間以内にご返信いたします。</p>
+
+        <h2>よくある質問</h2>
+        
+        <h3>バッチウォーターマークの使い方</h3>
+        <ol>
+            <li>「ウォーターマーク」タブを選択</li>
+            <li>画像をドラッグまたは選択</li>
+            <li>テキスト、位置、透明度を設定</li>
+            <li>出力フォルダを選択し「処理開始」をクリック</li>
+        </ol>
+
+        <h3>バッチモザイクの使い方</h3>
+        <ol>
+            <li>「モザイク」タブを選択</li>
+            <li>画像をドラッグまたは選択</li>
+            <li>検出タイプを選択（顔、電話番号など）</li>
+            <li>モザイクスタイルを調整し「処理開始」をクリック</li>
+        </ol>
+
+        <h3>対応画像形式</h3>
+        <p>JPG/JPEG、PNG、HEIC、TIFF、BMP</p>
+
+        <h3>Pro版の購入方法</h3>
+        <p>アプリ内のProアップグレードボタンからApp Storeで購入（¥600・ワンタイム）し、すべてのPro機能を永久にご利用いただけます。</p>
+
+        <h3>購入の復元方法</h3>
+        <p>「購入を復元」ボタンをクリックしてください。</p>
+
+        <h2>システム要件</h2>
+        <ul>
+            <li>macOS 13.0 (Ventura) 以降</li>
+            <li>Apple Silicon (M1/M2/M3/M4) または Intel プロセッサ</li>
+            <li>メモリ 8GB以上推奨</li>
+        </ul>
+    </div>
+
+    <!-- Korean -->
+    <div id="ko" class="content">
+        <h1>BatchMark 지원</h1>
+        
+        <h2>문의하기</h2>
+        <p>질문이나 문제가 있으시면 아래로 연락주세요:</p>
+        <div class="email">지원 이메일: <a href="mailto:fc_help@163.com">fc_help@163.com</a></div>
+        <p>24시간 이내에 답변드립니다.</p>
+
+        <h2>자주 묻는 질문</h2>
+        
+        <h3>일괄 워터마크 사용 방법</h3>
+        <ol>
+            <li>"워터마크" 탭 선택</li>
+            <li>이미지를 드래그하거나 선택</li>
+            <li>텍스트, 위치, 투명도 설정</li>
+            <li>출력 폴더 선택 후 "처리 시작" 클릭</li>
+        </ol>
+
+        <h3>일괄 모자이크 사용 방법</h3>
+        <ol>
+            <li>"모자이크" 탭 선택</li>
+            <li>이미지를 드래그하거나 선택</li>
+            <li>감지 유형 선택 (얼굴, 전화번호 등)</li>
+            <li>모자이크 스타일 조정 후 "처리 시작" 클릭</li>
+        </ol>
+
+        <h3>지원 이미지 형식</h3>
+        <p>JPG/JPEG, PNG, HEIC, TIFF, BMP</p>
+
+        <h3>Pro 버전 구매 방법</h3>
+        <p>앱 내 Pro 업그레이드 버튼을 클릭하여 App Store에서 구매(₩7,000·일회성)하면 모든 Pro 기능을 영구적으로 사용할 수 있습니다.</p>
+
+        <h3>구매 복원 방법</h3>
+        <p>"구매 복원" 버튼을 클릭하세요.</p>
+
+        <h2>시스템 요구사항</h2>
+        <ul>
+            <li>macOS 13.0 (Ventura) 이상</li>
+            <li>Apple Silicon (M1/M2/M3/M4) 또는 Intel 프로세서</li>
+            <li>RAM 8GB 이상 권장</li>
+        </ul>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
 </body>
 </html>
