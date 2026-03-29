@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusCapture Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .lang-switch { text-align: right; margin-bottom: 30px; }
+        .lang-switch button { background: #f0f0f0; border: none; padding: 8px 16px; margin-left: 8px; cursor: pointer; border-radius: 4px; }
+        .lang-switch button.active { background: #007AFF; color: white; }
+        h1 { font-size: 28px; margin-bottom: 10px; }
+        h2 { font-size: 20px; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+        h3 { font-size: 16px; margin: 20px 0 10px; color: #555; }
+        p, li { margin-bottom: 10px; }
+        ul, ol { margin-left: 20px; margin-bottom: 15px; }
+        .email { background: #f5f5f5; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .email a { color: #007AFF; text-decoration: none; }
+        .content { display: none; }
+        .content.active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button onclick="switchLang('zh')" class="active" id="btn-zh">中文</button>
+        <button onclick="switchLang('en')" id="btn-en">English</button>
+        <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+        <button onclick="switchLang('ko')" id="btn-ko">한국어</button>
+    </div>
+
+    <!-- Chinese -->
+    <div id="zh" class="content active">
+        <h1>FocusCapture 技术支持</h1>
+
+        <h2>联系我们</h2>
+        <p>使用过程中遇到任何问题，请通过以下方式联系我们：</p>
+        <div class="email">技术支持邮箱：<a href="mailto:fc_help@163.com">fc_help@163.com</a></div>
+        <p>我们会在 24 小时内回复。</p>
+
+        <h2>常见问题</h2>
+
+        <h3>如何进行区域截图？</h3>
+        <p>使用快捷键（默认 ⌘⇧1）或点击菜单栏图标选择「区域截图」，然后拖拽选择要截取的区域即可。</p>
+
+        <h3>如何使用滚动截屏？</h3>
+        <ol>
+            <li>点击菜单栏图标选择「长截图」</li>
+            <li>拖拽选择要截取的区域</li>
+            <li>选择自动滚动或手动滚动模式</li>
+            <li>按 ↩ 键完成截图，按 ESC 取消</li>
+        </ol>
+
+        <h3>如何使用步进截图？</h3>
+        <ol>
+            <li>点击菜单栏图标选择「步进截图」</li>
+            <li>框选每个步骤的区域并添加说明</li>
+            <li>点击「完成」生成带步骤编号的教程图</li>
+            <li>点击「暂存」可暂时保存进度，稍后继续</li>
+        </ol>
+
+        <h3>如何使用 OCR 文字识别？</h3>
+        <ol>
+            <li>点击菜单栏图标选择「文字识别」</li>
+            <li>拖拽选择包含文字的区域</li>
+            <li>识别结果会自动复制到剪贴板</li>
+        </ol>
+
+        <h3>自动滚动截屏不滚动怎么办？</h3>
+        <p>自动滚动需要辅助功能权限。请前往「系统设置 → 隐私与安全性 → 辅助功能」，确保 FocusCapture 已被授权，然后重新发起滚动截屏。</p>
+
+        <h3>截图后没有出现编辑界面？</h3>
+        <p>请检查「偏好设置 → 通用」中的「截图后操作」设置，确保已开启「显示编辑界面」选项。</p>
+
+        <h3>如何购买 Pro 版本？</h3>
+        <p>点击应用内的「升级到 Pro」按钮，通过 App Store 完成购买（一次性买断），即可永久解锁所有 Pro 功能。</p>
+
+        <h3>如何恢复购买？</h3>
+        <p>点击「升级到 Pro」页面中的「恢复购买」按钮即可。</p>
+
+        <h2>系统要求</h2>
+        <ul>
+            <li>macOS 13.0 (Ventura) 或更高版本</li>
+            <li>Apple Silicon (M1/M2/M3/M4) 或 Intel 处理器</li>
+            <li>建议 8GB 以上内存</li>
+        </ul>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="content">
+        <h1>FocusCapture Support</h1>
+
+        <h2>Contact Us</h2>
+        <p>If you encounter any issues, please reach out:</p>
+        <div class="email">Support email: <a href="mailto:fc_help@163.com">fc_help@163.com</a></div>
+        <p>We respond within 24 hours.</p>
+
+        <h2>FAQ</h2>
+
+        <h3>How do I take a region screenshot?</h3>
+        <p>Use the shortcut (default ⌘⇧1) or click the menu bar icon and select "Region Screenshot", then drag to select the area.</p>
+
+        <h3>How do I use scrolling capture?</h3>
+        <ol>
+            <li>Click the menu bar icon and select "Scrolling Capture"</li>
+            <li>Drag to select the area to capture</li>
+            <li>Choose auto-scroll or manual-scroll mode</li>
+            <li>Press ↩ to finish, ESC to cancel</li>
+        </ol>
+
+        <h3>How do I use Scribe (step-by-step capture)?</h3>
+        <ol>
+            <li>Click the menu bar icon and select "Scribe"</li>
+            <li>Select each step area and add a description</li>
+            <li>Click "Finish" to generate a numbered tutorial image</li>
+            <li>Click "Stash" to save progress and continue later</li>
+        </ol>
+
+        <h3>How do I use OCR text recognition?</h3>
+        <ol>
+            <li>Click the menu bar icon and select "OCR"</li>
+            <li>Drag to select the area containing text</li>
+            <li>The recognized text is automatically copied to the clipboard</li>
+        </ol>
+
+        <h3>Auto-scroll doesn't work — what should I do?</h3>
+        <p>Auto-scroll requires Accessibility permission. Go to System Settings → Privacy &amp; Security → Accessibility and make sure FocusCapture is authorized, then try again.</p>
+
+        <h3>The editor doesn't appear after taking a screenshot?</h3>
+        <p>Check Preferences → General → "Action after screenshot" and make sure "Show editor" is enabled.</p>
+
+        <h3>How do I purchase Pro?</h3>
+        <p>Click the "Upgrade to Pro" button in the app and complete the purchase through the App Store (one-time purchase) to permanently unlock all Pro features.</p>
+
+        <h3>How do I restore my purchase?</h3>
+        <p>Click the "Restore Purchase" button on the "Upgrade to Pro" page.</p>
+
+        <h2>System Requirements</h2>
+        <ul>
+            <li>macOS 13.0 (Ventura) or later</li>
+            <li>Apple Silicon (M1/M2/M3/M4) or Intel processor</li>
+            <li>8GB RAM or more recommended</li>
+        </ul>
+    </div>
+
+    <!-- Japanese -->
+    <div id="ja" class="content">
+        <h1>FocusCapture サポート</h1>
+
+        <h2>お問い合わせ</h2>
+        <p>ご不明な点がございましたら、以下よりお問い合わせください：</p>
+        <div class="email">サポートメール：<a href="mailto:fc_help@163.com">fc_help@163.com</a></div>
+        <p>24時間以内にご返答いたします。</p>
+
+        <h2>よくある質問</h2>
+
+        <h3>範囲スクリーンショットの撮り方は？</h3>
+        <p>ショートカット（デフォルト ⌘⇧1）を使用するか、メニューバーアイコンをクリックして「範囲スクリーンショット」を選択し、エリアをドラッグして選択します。</p>
+
+        <h3>スクロールキャプチャの使い方は？</h3>
+        <ol>
+            <li>メニューバーアイコンをクリックして「長いスクリーンショット」を選択</li>
+            <li>キャプチャするエリアをドラッグして選択</li>
+            <li>自動スクロールまたは手動スクロールモードを選択</li>
+            <li>↩ キーで完了、ESC でキャンセル</li>
+        </ol>
+
+        <h3>ステップキャプチャ（Scribe）の使い方は？</h3>
+        <ol>
+            <li>メニューバーアイコンをクリックして「ステップキャプチャ」を選択</li>
+            <li>各ステップのエリアを選択して説明を追加</li>
+            <li>「完了」をクリックして番号付きチュートリアル画像を生成</li>
+            <li>「一時保存」をクリックして後で続けることができます</li>
+        </ol>
+
+        <h3>OCRテキスト認識の使い方は？</h3>
+        <ol>
+            <li>メニューバーアイコンをクリックして「テキスト認識」を選択</li>
+            <li>テキストを含むエリアをドラッグして選択</li>
+            <li>認識されたテキストは自動的にクリップボードにコピーされます</li>
+        </ol>
+
+        <h3>自動スクロールが動作しない場合は？</h3>
+        <p>自動スクロールにはアクセシビリティ権限が必要です。システム設定 → プライバシーとセキュリティ → アクセシビリティで FocusCapture が許可されていることを確認してから、再度お試しください。</p>
+
+        <h3>スクリーンショット後にエディタが表示されない場合は？</h3>
+        <p>環境設定 → 一般 →「スクリーンショット後の動作」を確認し、「エディタを表示」が有効になっているか確認してください。</p>
+
+        <h3>Proバージョンの購入方法は？</h3>
+        <p>アプリ内の「Proにアップグレード」ボタンをクリックし、App Storeで購入（買い切り）するとすべてのPro機能が永続的に使えます。</p>
+
+        <h3>購入を復元するには？</h3>
+        <p>「Proにアップグレード」ページの「購入を復元」ボタンをクリックしてください。</p>
+
+        <h2>システム要件</h2>
+        <ul>
+            <li>macOS 13.0 (Ventura) 以降</li>
+            <li>Apple Silicon (M1/M2/M3/M4) または Intel プロセッサ</li>
+            <li>8GB以上のRAM推奨</li>
+        </ul>
+    </div>
+
+    <!-- Korean -->
+    <div id="ko" class="content">
+        <h1>FocusCapture 지원</h1>
+
+        <h2>문의하기</h2>
+        <p>문제가 있으시면 아래로 연락주세요:</p>
+        <div class="email">지원 이메일: <a href="mailto:fc_help@163.com">fc_help@163.com</a></div>
+        <p>24시간 이내에 답변드립니다.</p>
+
+        <h2>자주 묻는 질문</h2>
+
+        <h3>영역 스크린샷 찍는 방법은?</h3>
+        <p>단축키(기본 ⌘⇧1)를 사용하거나 메뉴 막대 아이콘을 클릭하여 "영역 스크린샷"을 선택한 후 영역을 드래그하여 선택합니다.</p>
+
+        <h3>스크롤 캡처 사용 방법은?</h3>
+        <ol>
+            <li>메뉴 막대 아이콘을 클릭하여 "긴 스크린샷" 선택</li>
+            <li>캡처할 영역을 드래그하여 선택</li>
+            <li>자동 스크롤 또는 수동 스크롤 모드 선택</li>
+            <li>↩ 키로 완료, ESC로 취소</li>
+        </ol>
+
+        <h3>단계별 캡처(Scribe) 사용 방법은?</h3>
+        <ol>
+            <li>메뉴 막대 아이콘을 클릭하여 "단계별 캡처" 선택</li>
+            <li>각 단계 영역을 선택하고 설명 추가</li>
+            <li>"완료"를 클릭하여 번호가 매겨진 튜토리얼 이미지 생성</li>
+            <li>"임시 저장"을 클릭하여 나중에 계속할 수 있습니다</li>
+        </ol>
+
+        <h3>OCR 텍스트 인식 사용 방법은?</h3>
+        <ol>
+            <li>메뉴 막대 아이콘을 클릭하여 "텍스트 인식" 선택</li>
+            <li>텍스트가 포함된 영역을 드래그하여 선택</li>
+            <li>인식된 텍스트가 자동으로 클립보드에 복사됩니다</li>
+        </ol>
+
+        <h3>자동 스크롤이 작동하지 않는 경우?</h3>
+        <p>자동 스크롤은 손쉬운 사용 권한이 필요합니다. 시스템 설정 → 개인 정보 보호 및 보안 → 손쉬운 사용에서 FocusCapture가 허용되어 있는지 확인한 후 다시 시도하세요.</p>
+
+        <h3>스크린샷 후 편집기가 표시되지 않는 경우?</h3>
+        <p>환경설정 → 일반 → "스크린샷 후 동작"을 확인하고 "편집기 표시"가 활성화되어 있는지 확인하세요.</p>
+
+        <h3>Pro 버전 구매 방법은?</h3>
+        <p>앱 내 "Pro로 업그레이드" 버튼을 클릭하여 App Store에서 구매(일회성)하면 모든 Pro 기능을 영구적으로 사용할 수 있습니다.</p>
+
+        <h3>구매 복원 방법은?</h3>
+        <p>"Pro로 업그레이드" 페이지의 "구매 복원" 버튼을 클릭하세요.</p>
+
+        <h2>시스템 요구사항</h2>
+        <ul>
+            <li>macOS 13.0 (Ventura) 이상</li>
+            <li>Apple Silicon (M1/M2/M3/M4) 또는 Intel 프로세서</li>
+            <li>RAM 8GB 이상 권장</li>
+        </ul>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
