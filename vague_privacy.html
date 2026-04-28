@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vague Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .lang-switch { text-align: right; margin-bottom: 30px; }
+        .lang-switch button { background: #f0f0f0; border: none; padding: 8px 16px; margin-left: 8px; cursor: pointer; border-radius: 4px; }
+        .lang-switch button.active { background: #007AFF; color: white; }
+        h1 { font-size: 28px; margin-bottom: 10px; }
+        .date { color: #666; margin-bottom: 20px; }
+        h2 { font-size: 20px; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 1px solid #eee; }
+        h3 { font-size: 16px; margin: 20px 0 10px; color: #555; }
+        p, li { margin-bottom: 10px; }
+        ul { margin-left: 20px; margin-bottom: 15px; }
+        .highlight { background: #f5f5f5; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .content { display: none; }
+        .content.active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button onclick="switchLang('zh')" class="active" id="btn-zh">中文</button>
+        <button onclick="switchLang('en')" id="btn-en">English</button>
+        <button onclick="switchLang('ja')" id="btn-ja">日本語</button>
+        <button onclick="switchLang('ko')" id="btn-ko">한국어</button>
+    </div>
+
+    <!-- Chinese -->
+    <div id="zh" class="content active">
+        <h1>隐图 隐私政策</h1>
+        <p class="date">生效日期：2026-04-28 | 最后更新：2026-04-28</p>
+
+        <h2>简介</h2>
+        <p>隐图（Vague）尊重并保护所有用户的隐私权。本政策说明我们如何处理您的信息。</p>
+
+        <h2>数据收集</h2>
+        <div class="highlight">
+            <strong>完全不收集任何数据</strong><br><br>
+            隐图是一款完全本地化的图片视频打码工具，不会收集：
+            <ul>
+                <li>您的照片和视频文件</li>
+                <li>个人身份信息</li>
+                <li>设备标识符（IDFA、IDFV 等）</li>
+                <li>位置信息</li>
+                <li>使用行为数据</li>
+                <li>任何形式的分析数据</li>
+            </ul>
+        </div>
+
+        <h2>数据处理</h2>
+        <ul>
+            <li>所有图片和视频处理均在您的设备本地完成</li>
+            <li>处理后导出到您的照片库或本地存储</li>
+            <li>不会上传任何文件到远程服务器</li>
+            <li>不会通过网络传输任何用户内容</li>
+        </ul>
+
+        <h2>权限说明</h2>
+        <h3>照片库访问权限</h3>
+        <p>用于读取您选择的图片和视频文件，以及将处理后的文件保存到照片库。App 仅访问您明确选择的文件。</p>
+
+        <h2>网络使用</h2>
+        <p>本 App 唯一的网络请求是版本更新检测（通过 Apple iTunes Search API），不包含任何用户数据。除此之外，App 不进行任何其他网络通信。</p>
+
+        <h2>App 内购买</h2>
+        <p>购买通过 Apple App Store（StoreKit 2）处理，我们不会获取或存储您的支付信息。购买记录由 Apple 管理。</p>
+
+        <h2>第三方服务</h2>
+        <p>隐图不包含任何第三方分析工具、广告 SDK、社交媒体 SDK 或数据追踪工具。仅使用 Apple 提供的系统框架：</p>
+        <ul>
+            <li>StoreKit 2（App 内购买）</li>
+            <li>AVFoundation（视频处理）</li>
+            <li>CoreImage / Metal（图像处理）</li>
+            <li>SwiftUI（用户界面）</li>
+        </ul>
+
+        <h2>儿童隐私</h2>
+        <p>本 App 不收集任何人的任何数据，包括 13 岁以下儿童。App 内容适合 4+ 年龄段。</p>
+
+        <h2>联系我们</h2>
+        <p>如有隐私相关问题，请联系：<a href="mailto:fc_help@163.com">fc_help@163.com</a></p>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="content">
+        <h1>Vague Privacy Policy</h1>
+        <p class="date">Effective Date: 2026-04-28 | Last Updated: 2026-04-28</p>
+
+        <h2>Introduction</h2>
+        <p>Vague respects and protects the privacy of all users. This policy explains how we handle your information.</p>
+
+        <h2>Data Collection</h2>
+        <div class="highlight">
+            <strong>We do not collect any data</strong><br><br>
+            Vague is a fully local photo and video masking tool. We do not collect:
+            <ul>
+                <li>Your photo and video files</li>
+                <li>Personal identification information</li>
+                <li>Device identifiers (IDFA, IDFV, etc.)</li>
+                <li>Location information</li>
+                <li>Usage behavior data</li>
+                <li>Any form of analytics data</li>
+            </ul>
+        </div>
+
+        <h2>Data Processing</h2>
+        <ul>
+            <li>All photo and video processing is done locally on your device</li>
+            <li>Processed files are exported to your photo library or local storage</li>
+            <li>No files are uploaded to any remote server</li>
+            <li>No user content is transmitted over the network</li>
+        </ul>
+
+        <h2>Permissions</h2>
+        <h3>Photo Library Access</h3>
+        <p>Used to read your selected photos and videos, and to save processed files to your photo library. The app only accesses files you explicitly select.</p>
+
+        <h2>Network Usage</h2>
+        <p>The only network request made by this app is for version update checking (via Apple iTunes Search API), which contains no user data. Apart from this, the app performs no other network communication.</p>
+
+        <h2>In-App Purchases</h2>
+        <p>Purchases are processed through Apple App Store (StoreKit 2). We do not access or store your payment information. Purchase records are managed by Apple.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>Vague does not include any third-party analytics tools, advertising SDKs, social media SDKs, or data tracking tools. We only use Apple system frameworks:</p>
+        <ul>
+            <li>StoreKit 2 (in-app purchases)</li>
+            <li>AVFoundation (video processing)</li>
+            <li>CoreImage / Metal (image processing)</li>
+            <li>SwiftUI (user interface)</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>This app does not collect any data from anyone, including children under 13. App content is suitable for ages 4+.</p>
+
+        <h2>Contact Us</h2>
+        <p>For privacy-related questions, contact: <a href="mailto:fc_help@163.com">fc_help@163.com</a></p>
+    </div>
+
+    <!-- Japanese -->
+    <div id="ja" class="content">
+        <h1>Vague プライバシーポリシー</h1>
+        <p class="date">発効日：2026-04-28 | 最終更新：2026-04-28</p>
+
+        <h2>はじめに</h2>
+        <p>Vagueはすべてのユーザーのプライバシーを尊重し保護します。このポリシーでは、お客様の情報の取り扱いについて説明します。</p>
+
+        <h2>データ収集</h2>
+        <div class="highlight">
+            <strong>データを一切収集しません</strong><br><br>
+            Vagueは完全にローカルな写真・動画マスキングツールです。以下を収集しません：
+            <ul>
+                <li>お客様の写真および動画ファイル</li>
+                <li>個人を特定できる情報</li>
+                <li>デバイス識別子（IDFA、IDFVなど）</li>
+                <li>位置情報</li>
+                <li>使用行動データ</li>
+                <li>いかなる分析データ</li>
+            </ul>
+        </div>
+
+        <h2>データ処理</h2>
+        <ul>
+            <li>すべての写真と動画の処理はお客様のデバイス上でローカルに行われます</li>
+            <li>処理後のファイルはフォトライブラリまたはローカルストレージに保存されます</li>
+            <li>ファイルがリモートサーバーにアップロードされることはありません</li>
+            <li>ネットワークを介してユーザーコンテンツが送信されることはありません</li>
+        </ul>
+
+        <h2>権限について</h2>
+        <h3>フォトライブラリへのアクセス</h3>
+        <p>選択した写真や動画の読み取り、および処理後のファイルをフォトライブラリに保存するために使用されます。明示的に選択したファイルのみにアクセスします。</p>
+
+        <h2>ネットワーク使用</h2>
+        <p>本アプリの唯一のネットワーク通信はバージョン更新確認（Apple iTunes Search API経由）であり、ユーザーデータは含まれません。それ以外のネットワーク通信は一切行いません。</p>
+
+        <h2>アプリ内購入</h2>
+        <p>購入はApple App Store（StoreKit 2）を通じて処理されます。お客様の支払い情報にアクセスまたは保存することはありません。購入記録はAppleが管理します。</p>
+
+        <h2>サードパーティサービス</h2>
+        <p>Vagueにはサードパーティの分析ツール、広告SDK、ソーシャルメディアSDK、データ追跡ツールは含まれていません。Appleのシステムフレームワークのみを使用します：</p>
+        <ul>
+            <li>StoreKit 2（アプリ内購入）</li>
+            <li>AVFoundation（動画処理）</li>
+            <li>CoreImage / Metal（画像処理）</li>
+            <li>SwiftUI（ユーザーインターフェース）</li>
+        </ul>
+
+        <h2>子供のプライバシー</h2>
+        <p>本アプリは13歳未満の子供を含め、誰からもデータを収集しません。アプリのコンテンツは4歳以上に適しています。</p>
+
+        <h2>お問い合わせ</h2>
+        <p>プライバシー関連のご質問はこちらまで：<a href="mailto:fc_help@163.com">fc_help@163.com</a></p>
+    </div>
+
+    <!-- Korean -->
+    <div id="ko" class="content">
+        <h1>Vague 개인정보 처리방침</h1>
+        <p class="date">발효일: 2026-04-28 | 최종 업데이트: 2026-04-28</p>
+
+        <h2>소개</h2>
+        <p>Vague는 모든 사용자의 개인정보를 존중하고 보호합니다. 이 정책은 귀하의 정보를 어떻게 처리하는지 설명합니다.</p>
+
+        <h2>데이터 수집</h2>
+        <div class="highlight">
+            <strong>어떠한 데이터도 수집하지 않습니다</strong><br><br>
+            Vague는 완전히 로컬인 사진·비디오 마스킹 도구입니다. 다음을 수집하지 않습니다:
+            <ul>
+                <li>귀하의 사진 및 비디오 파일</li>
+                <li>개인 식별 정보</li>
+                <li>기기 식별자 (IDFA, IDFV 등)</li>
+                <li>위치 정보</li>
+                <li>사용 행동 데이터</li>
+                <li>모든 형태의 분석 데이터</li>
+            </ul>
+        </div>
+
+        <h2>데이터 처리</h2>
+        <ul>
+            <li>모든 사진 및 비디오 처리는 귀하의 기기에서 로컬로 수행됩니다</li>
+            <li>처리된 파일은 사진 라이브러리 또는 로컬 저장소로 내보내집니다</li>
+            <li>파일이 원격 서버에 업로드되지 않습니다</li>
+            <li>네트워크를 통해 사용자 콘텐츠가 전송되지 않습니다</li>
+        </ul>
+
+        <h2>권한 안내</h2>
+        <h3>사진 라이브러리 접근</h3>
+        <p>선택한 사진 및 비디오를 읽고 처리된 파일을 사진 라이브러리에 저장하는 데 사용됩니다. 명시적으로 선택한 파일에만 접근합니다.</p>
+
+        <h2>네트워크 사용</h2>
+        <p>본 앱의 유일한 네트워크 요청은 버전 업데이트 확인(Apple iTunes Search API 경유)이며, 사용자 데이터를 포함하지 않습니다. 이외의 네트워크 통신은 전혀 수행하지 않습니다.</p>
+
+        <h2>인앱 구매</h2>
+        <p>구매는 Apple App Store(StoreKit 2)를 통해 처리됩니다. 귀하의 결제 정보에 접근하거나 저장하지 않습니다. 구매 기록은 Apple이 관리합니다.</p>
+
+        <h2>제3자 서비스</h2>
+        <p>Vague에는 제3자 분석 도구, 광고 SDK, 소셜 미디어 SDK 또는 데이터 추적 도구가 포함되어 있지 않습니다. Apple 시스템 프레임워크만 사용합니다:</p>
+        <ul>
+            <li>StoreKit 2 (인앱 구매)</li>
+            <li>AVFoundation (비디오 처리)</li>
+            <li>CoreImage / Metal (이미지 처리)</li>
+            <li>SwiftUI (사용자 인터페이스)</li>
+        </ul>
+
+        <h2>아동 개인정보</h2>
+        <p>본 앱은 13세 미만 아동을 포함하여 누구로부터도 데이터를 수집하지 않습니다. 앱 콘텐츠는 4세 이상에 적합합니다.</p>
+
+        <h2>문의하기</h2>
+        <p>개인정보 관련 문의: <a href="mailto:fc_help@163.com">fc_help@163.com</a></p>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-switch button').forEach(el => el.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</body>
+</html>
