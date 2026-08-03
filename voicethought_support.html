@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="VoiceThought technical support agreement and contact information.">
+    <title>VoiceThought - 技术支持</title>
+    <style>
+        :root { color-scheme: light dark; --accent: #6d5dfc; --accent-soft: #efedff; --text: #1d1d26; --muted: #6b6b78; --line: #e8e7ee; --surface: rgba(255,255,255,.9); --background: #f7f6fb; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; color: var(--text); background: radial-gradient(circle at top right, #e9e5ff 0, transparent 32rem), var(--background); }
+        a { color: var(--accent); }
+        .shell { width: min(900px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 72px; }
+        .topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+        .brand { color: var(--text); font-size: 18px; font-weight: 750; text-decoration: none; letter-spacing: -.02em; }
+        .policy-link { color: var(--muted); text-decoration: none; font-size: 14px; }
+        .hero { max-width: 100%; overflow: hidden; padding: 42px; border: 1px solid rgba(109,93,252,.16); border-radius: 28px; background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(242,239,255,.94)); box-shadow: 0 24px 70px rgba(53,43,105,.10); }
+        .eyebrow { color: var(--accent); font-size: 13px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+        h1 { margin: 8px 0 12px; font-size: clamp(34px, 7vw, 54px); line-height: 1.08; letter-spacing: -.04em; }
+        .lede { max-width: 650px; margin: 0; color: var(--muted); font-size: 17px; }
+        .meta { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 24px; color: var(--muted); font-size: 14px; }
+        .meta > * { min-width: 0; }
+        .meta a { font-weight: 650; text-decoration: none; overflow-wrap: anywhere; }
+        .language-nav { position: sticky; top: 12px; z-index: 10; display: flex; gap: 6px; width: fit-content; max-width: 100%; margin: 24px auto; padding: 6px; overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: 0 10px 30px rgba(30,25,60,.08); backdrop-filter: blur(16px); }
+        button { border: 0; border-radius: 9px; padding: 9px 15px; color: var(--muted); background: transparent; font: inherit; font-size: 14px; font-weight: 650; white-space: nowrap; cursor: pointer; }
+        button:hover { background: var(--accent-soft); }
+        button.active { color: #fff; background: var(--accent); }
+        .content { display: none; padding: 12px 6px 0; }
+        .content.active { display: block; }
+        .content h2 { margin: 40px 0 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line); font-size: 22px; line-height: 1.35; letter-spacing: -.015em; }
+        .content p { margin: 10px 0; }
+        .content ul { padding-left: 24px; }
+        .content li { margin: 7px 0; }
+        .contact { margin: 22px 0 8px; padding: 18px 20px; border: 1px solid rgba(109,93,252,.18); border-radius: 14px; background: var(--accent-soft); }
+        .contact a { font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
+        footer { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 13px; }
+        @media (max-width: 600px) { .shell { width: calc(100% - 22px); max-width: 900px; padding-top: 18px; } .hero { padding: 28px 22px; border-radius: 22px; } .topbar { min-width: 0; padding: 0 4px; } .policy-link { min-width: 0; font-size: 13px; } .language-nav { top: 8px; width: 100%; } .language-nav button { flex: 1; min-width: max-content; padding-inline: 10px; } .content { padding-inline: 4px; } }
+        @media (prefers-color-scheme: dark) { :root { --accent: #9a8cff; --accent-soft: #292442; --text: #f3f1fa; --muted: #b2afbd; --line: #34313d; --surface: rgba(25,23,31,.9); --background: #121116; } body { background: radial-gradient(circle at top right, #28213f 0, transparent 32rem), var(--background); } .hero { background: linear-gradient(135deg, rgba(32,29,41,.97), rgba(37,32,58,.94)); box-shadow: none; } button.active { color: #14111f; } }
+    </style>
+</head>
+<body>
+    <main class="shell">
+        <nav class="topbar" aria-label="VoiceThought">
+            <a class="brand" href="#">VoiceThought</a>
+            <a class="policy-link" href="voicethought_privacy.html" data-link-zh="隐私政策" data-link-en="Privacy Policy" data-link-ja="プライバシー" data-link-ko="개인정보 처리방침">隐私政策</a>
+        </nav>
+
+        <header class="hero">
+            <div class="eyebrow">VoiceThought for iOS</div>
+            <h1 id="hero-title">技术支持</h1>
+            <p class="lede" id="hero-lede">产品使用帮助、故障排查和问题反馈。</p>
+            <div class="meta">
+                <span id="effective-date">生效日期：2026-08-03</span>
+                <span><a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></span>
+            </div>
+        </header>
+
+        <div class="language-nav" role="group" aria-label="Language">
+            <button type="button" class="active" data-lang="zh" aria-pressed="true">简体中文</button>
+            <button type="button" data-lang="en" aria-pressed="false">English</button>
+            <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+            <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+        </div>
+
+        <article id="zh" class="content active" lang="zh-CN">
+            <h2>1. 适用范围</h2>
+            <p>本技术支持协议适用于开发者为 VoiceThought iOS 应用提供的产品使用帮助、故障排查和问题反馈服务。使用 VoiceThought 或向开发者请求支持，即表示您理解并同意本协议。</p>
+            <h2>2. 支持内容</h2>
+            <p>技术支持通常包括：</p>
+            <ul><li>安装、启动和基础功能使用指引；</li><li>录音、降噪、语音转文字、内容整理、搜索、导出与分享功能的故障排查；</li><li>麦克风、语音识别和通知权限的设置指引；</li><li>数据存储空间、音频文件和本地识别模型相关问题的排查；</li><li>应用缺陷、兼容性问题和改进建议的接收与评估。</li></ul>
+            <p>技术支持不包括设备维修、Apple ID 或 App Store 账户问题、第三方应用或服务故障、数据取证，以及法律、医疗或其他专业咨询。</p>
+            <h2>3. 运行环境</h2>
+            <p>VoiceThought 支持 iOS 16.0 及以上系统。部分功能的速度和可用性会受到设备型号、可用存储空间、系统版本、麦克风状态、录音质量及环境噪声影响。建议使用受支持的最新稳定版 iOS 和最新版 VoiceThought。</p>
+            <h2>4. 获取支持</h2>
+            <div class="contact">技术支持邮箱：<a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></div>
+            <p>为便于定位问题，建议提供 VoiceThought 版本号、iOS 版本、设备型号、问题发生时间、操作步骤和错误提示。在不包含敏感内容的前提下，您也可以提供截图或必要的示例文件。</p>
+            <p>请勿发送包含商业秘密、个人敏感信息或未经授权的他人录音。除非排查问题确有必要且您主动选择发送，开发者不会要求您提供录音或转录正文。</p>
+            <h2>5. 响应与处理</h2>
+            <p>开发者会在合理范围内查看支持请求并尽力处理，但不承诺固定响应时间、修复期限或所有问题均可解决。严重缺陷、安全问题和影响核心功能的问题通常会被优先评估。功能建议是否采纳及发布时间由开发者综合决定。</p>
+            <h2>6. 数据与备份</h2>
+            <p>VoiceThought 的录音、降噪音频、转录文字及相关内容主要保存在您的设备本地。卸载应用、设备损坏、系统清理、存储异常或用户删除操作可能造成数据永久丢失。请在执行卸载、清理、换机或系统重置前，使用应用提供的导出或分享功能自行保存重要内容。</p>
+            <h2>7. 识别结果说明</h2>
+            <p>降噪和语音识别结果可能因音量过小、多人重叠说话、口音、专业术语、环境噪声或设备性能而出现遗漏或错误。VoiceThought 不保证识别和整理结果完全准确。请在将结果用于重要决策、正式文件或对外发布前自行核对。</p>
+            <h2>8. 合法使用</h2>
+            <p>您应遵守所在地关于录音、隐私、著作权和个人信息保护的法律，并在需要时事先取得被录音者授权。因您违法录音、传播或使用内容产生的责任由您自行承担。</p>
+            <h2>9. 协议更新</h2>
+            <p>本协议可能随产品功能、支持方式或法律要求变化而更新。更新版本将标明新的生效日期。重大变化会通过合理方式提示。</p>
+        </article>
+
+        <article id="en" class="content" lang="en">
+            <h2>1. Scope</h2><p>This agreement applies to product guidance, troubleshooting, and feedback support provided by the developer for the VoiceThought iOS app. By using VoiceThought or requesting support, you acknowledge this agreement.</p>
+            <h2>2. Support coverage</h2><p>Support generally covers:</p><ul><li>Installation, launch, and basic usage guidance;</li><li>Troubleshooting for recording, noise reduction, transcription, content organization, search, export, and sharing;</li><li>Guidance for microphone, speech recognition, and notification permissions;</li><li>Issues involving storage, audio files, and on-device recognition models;</li><li>Review of bug reports, compatibility issues, and feature suggestions.</li></ul><p>Support does not include device repair, Apple ID or App Store account issues, third-party apps or services, data forensics, or legal, medical, or other professional advice.</p>
+            <h2>3. System requirements</h2><p>VoiceThought supports iOS 16.0 or later. Performance and availability may vary with device model, free storage, system version, microphone condition, recording quality, and ambient noise. Using a supported stable iOS release and the latest VoiceThought version is recommended.</p>
+            <h2>4. Contacting support</h2><div class="contact">Support email: <a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></div><p>To help diagnose an issue, include the app version, iOS version, device model, time of occurrence, reproduction steps, and any error message. Screenshots or sample files should be provided only when necessary and should not contain sensitive information.</p><p>Do not send trade secrets, sensitive personal information, or recordings of others without authorization. The developer will not request your recordings or transcript content unless they are necessary for troubleshooting and you voluntarily choose to provide them.</p>
+            <h2>5. Response and resolution</h2><p>The developer will review requests and use reasonable efforts to assist, but does not guarantee a fixed response time, resolution date, or successful resolution of every issue. Critical defects, security issues, and failures affecting core functions are generally prioritized. Feature requests and release timing remain at the developer's discretion.</p>
+            <h2>6. Data and backups</h2><p>VoiceThought recordings, denoised audio, transcripts, and related content are primarily stored locally on your device. Uninstalling the app, device damage, system cleanup, storage failure, or deletion may cause permanent data loss. Export or share important content before uninstalling, migrating devices, clearing storage, or resetting the system.</p>
+            <h2>7. Accuracy notice</h2><p>Noise reduction and transcription may be incomplete or inaccurate because of low voice volume, overlapping speakers, accents, specialist terminology, background noise, or device performance. VoiceThought does not guarantee completely accurate recognition or organization. Review all output before using it for important decisions, formal documents, or publication.</p>
+            <h2>8. Lawful use</h2><p>You are responsible for complying with applicable recording, privacy, copyright, and data protection laws, including obtaining consent from recorded persons where required. You are responsible for unlawful recording, distribution, or use of content.</p>
+            <h2>9. Changes</h2><p>This agreement may be updated as features, support methods, or legal requirements change. The effective date will be updated, and material changes will be communicated through reasonable means.</p>
+        </article>
+
+        <article id="ja" class="content" lang="ja">
+            <h2>1. 適用範囲</h2><p>本規約は、開発者が VoiceThought iOS アプリについて提供する利用案内、トラブルシューティングおよびフィードバック対応に適用されます。VoiceThought の利用またはサポートの依頼により、本規約を理解し同意したものとみなされます。</p>
+            <h2>2. サポート内容</h2><p>通常のサポートには、インストールと基本操作、録音、ノイズ除去、文字起こし、内容整理、検索、書き出し、共有、各種権限、端末ストレージ、音声ファイル、端末内認識モデルに関する案内や不具合調査が含まれます。</p><p>端末修理、Apple ID や App Store アカウント、第三者のアプリやサービス、データ鑑定、法律・医療その他の専門的助言は対象外です。</p>
+            <h2>3. 動作環境</h2><p>VoiceThought は iOS 16.0 以降に対応します。処理速度や利用可否は、端末、空き容量、OS、マイク、録音品質、周囲の雑音などの影響を受けます。対応する安定版 iOS と最新の VoiceThought の利用を推奨します。</p>
+            <h2>4. お問い合わせ</h2><div class="contact">サポートメール：<a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></div><p>アプリと iOS のバージョン、端末、発生日時、再現手順、エラー表示をご記載ください。スクリーンショットやサンプルは必要な場合に限り、機密情報を除いて送信してください。</p><p>営業秘密、機微な個人情報、許可を得ていない第三者の録音を送信しないでください。調査に必要であり、かつ利用者が自ら送信を選択した場合を除き、開発者が録音や文字起こし本文の提供を求めることはありません。</p>
+            <h2>5. 対応方針</h2><p>開発者は合理的な範囲で対応しますが、回答時間、修正時期、すべての問題の解決を保証しません。重大な不具合、セキュリティ問題、主要機能への影響は通常優先して検討します。機能要望の採否と提供時期は開発者が判断します。</p>
+            <h2>6. データとバックアップ</h2><p>録音、ノイズ除去済み音声、文字起こしなどは主に端末内に保存されます。アプリの削除、端末故障、システムによる消去、ストレージ障害、利用者の削除操作によりデータが失われる場合があります。アンインストール、機種変更、消去、初期化の前に重要な内容を書き出しまたは共有してください。</p>
+            <h2>7. 精度について</h2><p>声が小さい場合、話者が重なる場合、アクセント、専門用語、雑音、端末性能などにより、ノイズ除去や文字起こしに誤りが生じることがあります。重要な判断、正式文書、公開に使用する前に必ず内容を確認してください。</p>
+            <h2>8. 適法な利用</h2><p>録音、プライバシー、著作権、個人情報保護に関する法令を遵守し、必要な場合は録音対象者の同意を得てください。違法な録音、配布または利用については利用者が責任を負います。</p>
+            <h2>9. 規約の変更</h2><p>機能、サポート方法または法令の変更に応じて本規約を更新する場合があります。更新時には発効日を変更し、重要な変更は合理的な方法でお知らせします。</p>
+        </article>
+
+        <article id="ko" class="content" lang="ko">
+            <h2>1. 적용 범위</h2><p>본 약관은 개발자가 VoiceThought iOS 앱에 관해 제공하는 사용 안내, 문제 해결 및 의견 접수 지원에 적용됩니다. VoiceThought를 사용하거나 지원을 요청하면 본 약관을 이해하고 동의한 것으로 간주합니다.</p>
+            <h2>2. 지원 범위</h2><p>기술 지원에는 일반적으로 설치 및 기본 사용법, 녹음, 노이즈 제거, 음성 인식, 내용 정리, 검색, 내보내기, 공유, 권한 설정, 저장 공간, 오디오 파일 및 온디바이스 인식 모델 관련 문제 해결이 포함됩니다.</p><p>기기 수리, Apple ID 또는 App Store 계정, 제3자 앱이나 서비스, 데이터 포렌식, 법률·의료 및 기타 전문 자문은 포함되지 않습니다.</p>
+            <h2>3. 실행 환경</h2><p>VoiceThought는 iOS 16.0 이상을 지원합니다. 성능과 기능 사용 가능 여부는 기기 모델, 여유 저장 공간, 시스템 버전, 마이크 상태, 녹음 품질 및 주변 소음의 영향을 받을 수 있습니다. 지원되는 안정 버전의 iOS와 최신 VoiceThought 사용을 권장합니다.</p>
+            <h2>4. 지원 요청</h2><div class="contact">지원 이메일: <a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></div><p>앱 및 iOS 버전, 기기 모델, 발생 시간, 재현 절차와 오류 메시지를 함께 보내면 문제 확인에 도움이 됩니다. 스크린샷이나 예제 파일은 필요한 경우에만 민감한 정보를 제거한 뒤 보내십시오.</p><p>영업 비밀, 민감한 개인정보 또는 허가받지 않은 타인의 녹음을 보내지 마십시오. 문제 해결에 꼭 필요하고 사용자가 자발적으로 제공하는 경우가 아니라면 개발자는 녹음이나 전사 본문을 요구하지 않습니다.</p>
+            <h2>5. 응답 및 처리</h2><p>개발자는 합리적인 범위에서 지원 요청을 검토하고 해결을 위해 노력하지만, 정해진 응답 시간이나 수정 기한 또는 모든 문제의 해결을 보장하지 않습니다. 심각한 결함, 보안 문제 및 핵심 기능 장애는 일반적으로 우선 검토됩니다. 기능 제안의 반영 여부와 출시 시점은 개발자가 결정합니다.</p>
+            <h2>6. 데이터 및 백업</h2><p>녹음, 노이즈 제거 오디오, 전사문과 관련 콘텐츠는 주로 사용자의 기기에 저장됩니다. 앱 삭제, 기기 손상, 시스템 정리, 저장 장치 오류 또는 사용자 삭제로 데이터가 영구적으로 손실될 수 있습니다. 앱 삭제, 기기 변경, 저장 공간 정리 또는 초기화 전에 중요한 내용을 내보내거나 공유하십시오.</p>
+            <h2>7. 정확도 안내</h2><p>작은 음성, 겹치는 화자, 억양, 전문 용어, 주변 소음 또는 기기 성능으로 인해 노이즈 제거와 음성 인식 결과가 누락되거나 부정확할 수 있습니다. 중요한 결정, 공식 문서 또는 공개에 사용하기 전에 결과를 직접 확인해야 합니다.</p>
+            <h2>8. 적법한 사용</h2><p>사용자는 녹음, 개인정보 보호, 저작권 및 데이터 보호 관련 법률을 준수하고 필요한 경우 녹음 대상자의 동의를 받아야 합니다. 불법적인 녹음, 배포 또는 콘텐츠 사용에 대한 책임은 사용자에게 있습니다.</p>
+            <h2>9. 약관 변경</h2><p>기능, 지원 방식 또는 법적 요구사항의 변경에 따라 본 약관을 개정할 수 있습니다. 개정 시 시행일을 변경하며 중요한 변경사항은 합리적인 방법으로 안내합니다.</p>
+        </article>
+
+        <footer>© 2026 VoiceThought · <a href="voicethought_privacy.html">Privacy Policy</a></footer>
+    </main>
+    <script>
+        const pageCopy = {
+            zh: { title: '技术支持', lede: '产品使用帮助、故障排查和问题反馈。', date: '生效日期：2026-08-03', link: '隐私政策' },
+            en: { title: 'Technical Support', lede: 'Product guidance, troubleshooting, and feedback support.', date: 'Effective date: 2026-08-03', link: 'Privacy Policy' },
+            ja: { title: 'テクニカルサポート', lede: '利用案内、トラブルシューティング、フィードバック対応。', date: '発効日：2026-08-03', link: 'プライバシー' },
+            ko: { title: '기술 지원', lede: '제품 사용 안내, 문제 해결 및 의견 접수 지원.', date: '시행일: 2026-08-03', link: '개인정보 처리방침' }
+        };
+        function switchLanguage(lang, persist = true) {
+            if (!pageCopy[lang]) return;
+            document.querySelectorAll('.content').forEach(el => el.classList.toggle('active', el.id === lang));
+            document.querySelectorAll('[data-lang]').forEach(button => { const active = button.dataset.lang === lang; button.classList.toggle('active', active); button.setAttribute('aria-pressed', active); });
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+            document.getElementById('hero-title').textContent = pageCopy[lang].title;
+            document.getElementById('hero-lede').textContent = pageCopy[lang].lede;
+            document.getElementById('effective-date').textContent = pageCopy[lang].date;
+            document.querySelector('.policy-link').textContent = pageCopy[lang].link;
+            if (persist) {
+                try { localStorage.setItem('voicethought-language', lang); } catch (_) {}
+            }
+        }
+        document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => switchLanguage(button.dataset.lang)));
+        let savedLanguage = null;
+        try { savedLanguage = localStorage.getItem('voicethought-language'); } catch (_) {}
+        const browserLanguage = (navigator.language || '').slice(0, 2);
+        switchLanguage(savedLanguage || (pageCopy[browserLanguage] ? browserLanguage : 'zh'), false);
+    </script>
+</body>
+</html>
