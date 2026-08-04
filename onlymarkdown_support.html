@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术支持 Technical Support - MarkdownMe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f7;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .language-switcher button {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            margin: 0 4px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .language-switcher button:hover {
+            background: #f0f0f0;
+        }
+
+        .language-switcher button.active {
+            background: #007AFF;
+            color: white;
+            border-color: #007AFF;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .language-section {
+            display: none;
+        }
+
+        .language-section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #1d1d1f;
+            font-size: 1.8em;
+            margin: 35px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin: 25px 0 12px 0;
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .contact-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        .faq-answer {
+            color: #555;
+        }
+
+        .feature-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+            background: white;
+            border-radius: 16px;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .language-switcher {
+                position: static;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('zh')" class="active" id="btn-zh">中文</button>
+        <button onclick="switchLanguage('en')" id="btn-en">English</button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>MarkdownMe</h1>
+            <p>专业的 Markdown 编辑器 Professional Markdown Editor</p>
+        </div>
+
+        <div class="content">
+            <!-- Chinese Version -->
+            <div id="content-zh" class="language-section active">
+                <div class="contact-box">
+                    <h3>📞 联系方式</h3>
+                    <p><strong>GitHub Issues (推荐)</strong><br>
+                    <a href="https://github.com/jiangfuqiang/OnlyMarkdown/issues" target="_blank">https://github.com/jiangfuqiang/OnlyMarkdown/issues</a></p>
+                    <p><strong>Email</strong><br>
+                    <a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>报告 Bug</li>
+                        <li>提出功能建议</li>
+                        <li>查看已知问题</li>
+                        <li>参与社区讨论</li>
+                    </ul>
+                </div>
+
+                <h2>🆘 常见问题 FAQ</h2>
+
+                <h3>基础使用</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何添加文件夹？</div>
+                    <div class="faq-answer">A: 点击左侧边栏顶部的"+"按钮，选择"Add Folder"，然后选择包含 Markdown 文件的文件夹。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何在普通模式和开发者模式之间切换？</div>
+                    <div class="faq-answer">A: 点击工具栏右侧的模式切换按钮，可以在"普通"和"开发"模式之间切换。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 支持哪些文件格式？</div>
+                    <div class="faq-answer">
+                        <ul style="margin-left: 20px;">
+                            <li>Markdown 文件 (.md, .markdown)</li>
+                            <li>纯文本文件 (.txt)</li>
+                            <li>Textbundle 文件 (.textbundle)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何导出文件？</div>
+                    <div class="faq-answer">A: 点击菜单栏的"文件" > "导出"，可以选择导出为 HTML 或 PDF 格式。</div>
+                </div>
+
+                <h3>Mermaid 图表</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何创建 Mermaid 图表？</div>
+                    <div class="faq-answer">
+                        <p>使用代码块语法：</p>
+                        <pre><code>```mermaid
+graph LR
+    A --> B
+```</code></pre>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何放大查看 Mermaid 图表？</div>
+                    <div class="faq-answer">A: 将鼠标悬停在图表上，点击右上角出现的"🔍 放大"按钮。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: Mermaid 图表支持哪些类型？</div>
+                    <div class="faq-answer">A: 支持流程图、时序图、甘特图、类图、状态图、饼图等所有 Mermaid 标准图表类型。</div>
+                </div>
+
+                <h3>数学公式</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何插入数学公式？</div>
+                    <div class="faq-answer">
+                        <p>行内公式：<code>$E = mc^2$</code></p>
+                        <p>独立公式块：</p>
+                        <pre><code>$$
+\int_{a}^{b} f(x) dx
+$$</code></pre>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 支持哪些 LaTeX 语法？</div>
+                    <div class="faq-answer">A: 支持标准的 LaTeX 数学语法，使用 KaTeX 渲染引擎。</div>
+                </div>
+
+                <h3>文件搜索</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何搜索文件？</div>
+                    <div class="faq-answer">
+                        <p>在左侧边栏顶部的搜索框中输入关键词，可以选择搜索范围：</p>
+                        <ul style="margin-left: 20px;">
+                            <li>文件名：只搜索文件名</li>
+                            <li>正文：只搜索文件内容</li>
+                            <li>文件名和正文：全文搜索</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>图片处理</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何插入图片？</div>
+                    <div class="faq-answer">
+                        <ol style="margin-left: 20px;">
+                            <li>拖拽图片到编辑器</li>
+                            <li>使用菜单"插入" > "图片"</li>
+                            <li>使用 Markdown 语法：<code>![描述](图片路径)</code></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <h2>🔧 故障排除</h2>
+
+                <h3>应用无法启动</h3>
+                <p><strong>症状：</strong>双击应用图标后没有反应</p>
+                <p><strong>解决方案：</strong></p>
+                <ol>
+                    <li>检查 macOS 版本是否符合要求（macOS 13.0+）</li>
+                    <li>尝试重新安装应用</li>
+                    <li>查看控制台日志（应用程序 > 实用工具 > 控制台）</li>
+                </ol>
+
+                <h3>文件夹无法添加</h3>
+                <p><strong>症状：</strong>点击"Add Folder"后无法选择文件夹</p>
+                <p><strong>解决方案：</strong></p>
+                <ol>
+                    <li>确保您有该文件夹的读取权限</li>
+                    <li>尝试选择其他文件夹</li>
+                    <li>重启应用后重试</li>
+                </ol>
+
+                <h2>📚 使用技巧</h2>
+
+                <h3>键盘快捷键</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>功能</th>
+                            <th>快捷键</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>新建文档</td><td>⌘ + N</td></tr>
+                        <tr><td>打开文件</td><td>⌘ + O</td></tr>
+                        <tr><td>保存</td><td>⌘ + S</td></tr>
+                        <tr><td>导出</td><td>⌘ + E</td></tr>
+                        <tr><td>搜索</td><td>⌘ + F</td></tr>
+                        <tr><td>刷新文件树</td><td>⌘ + R</td></tr>
+                        <tr><td>切换模式</td><td>⌘ + \</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Markdown 语法速查</h3>
+                <pre><code># 标题 1
+## 标题 2
+### 标题 3
+
+**粗体** 或 __粗体__
+*斜体* 或 _斜体_
+~~删除线~~
+
+- 无序列表
+- 项目 2
+
+1. 有序列表
+2. 项目 2
+
+[链接文字](https://example.com)
+![图片描述](图片路径)
+
+`行内代码`
+
+> 引用文字
+
+| 表头1 | 表头2 |
+|-------|-------|
+| 单元格 | 单元格 |</code></pre>
+
+                <h2>🔄 版本信息</h2>
+                <p><strong>当前版本：</strong>1.0.0 (2026-07-21)</p>
+
+                <p><strong>主要功能：</strong></p>
+                <div>
+                    <span class="feature-badge">✨ Mermaid 图表</span>
+                    <span class="feature-badge">✨ 双模式编辑</span>
+                    <span class="feature-badge">✨ 智能搜索</span>
+                    <span class="feature-badge">✨ 数学公式</span>
+                    <span class="feature-badge">✨ 代码高亮</span>
+                    <span class="feature-badge">🔒 本地存储</span>
+                    <span class="feature-badge">🚀 无需网络</span>
+                </div>
+
+                <h2>📋 系统要求</h2>
+                <ul>
+                    <li><strong>操作系统：</strong>macOS 13.0 (Ventura) 或更高版本</li>
+                    <li><strong>处理器：</strong>Apple Silicon (M1/M2/M3) 或 Intel</li>
+                    <li><strong>内存：</strong>最低 4GB RAM（推荐 8GB）</li>
+                    <li><strong>磁盘空间：</strong>约 50MB</li>
+                </ul>
+
+                <h2>🌐 在线资源</h2>
+                <ul>
+                    <li><strong>项目主页：</strong><a href="https://github.com/jiangfuqiang/OnlyMarkdown" target="_blank">https://github.com/jiangfuqiang/OnlyMarkdown</a></li>
+                    <li><strong>Markdown 语法指南：</strong><a href="https://www.markdownguide.org/" target="_blank">https://www.markdownguide.org/</a></li>
+                    <li><strong>Mermaid 文档：</strong><a href="https://mermaid.js.org/" target="_blank">https://mermaid.js.org/</a></li>
+                    <li><strong>LaTeX 数学符号：</strong><a href="https://katex.org/docs/supported.html" target="_blank">https://katex.org/docs/supported.html</a></li>
+                </ul>
+
+                <h2>📧 反馈与建议</h2>
+                <p>您的反馈对我们非常重要！如果您有任何建议或想法，请：</p>
+                <ol>
+                    <li>在 GitHub 上创建 Issue</li>
+                    <li>发送邮件至 <a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></li>
+                    <li>在 App Store 留下评价</li>
+                </ol>
+                <p style="text-align: center; margin-top: 30px; font-size: 1.2em; color: #667eea;"><strong>感谢您使用 MarkdownMe！</strong></p>
+            </div>
+
+            <!-- English Version -->
+            <div id="content-en" class="language-section">
+                <div class="contact-box">
+                    <h3>📞 Contact</h3>
+                    <p><strong>GitHub Issues (Recommended)</strong><br>
+                    <a href="https://github.com/jiangfuqiang/OnlyMarkdown/issues" target="_blank">https://github.com/jiangfuqiang/OnlyMarkdown/issues</a></p>
+                    <p><strong>Email</strong><br>
+                    <a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Report bugs</li>
+                        <li>Request features</li>
+                        <li>View known issues</li>
+                        <li>Join community discussions</li>
+                    </ul>
+                </div>
+
+                <h2>🆘 FAQ</h2>
+
+                <h3>Basic Usage</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How to add a folder?</div>
+                    <div class="faq-answer">A: Click the "+" button at the top of the left sidebar, select "Add Folder", then choose a folder containing Markdown files.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How to switch between normal and developer mode?</div>
+                    <div class="faq-answer">A: Click the mode toggle button on the right side of the toolbar to switch between "Normal" and "Developer" modes.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What file formats are supported?</div>
+                    <div class="faq-answer">
+                        <ul style="margin-left: 20px;">
+                            <li>Markdown files (.md, .markdown)</li>
+                            <li>Plain text files (.txt)</li>
+                            <li>Textbundle files (.textbundle)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How to export files?</div>
+                    <div class="faq-answer">A: Click "File" > "Export" in the menu bar, then choose to export as HTML or PDF.</div>
+                </div>
+
+                <h3>Mermaid Diagrams</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How to create Mermaid diagrams?</div>
+                    <div class="faq-answer">
+                        <p>Use code block syntax:</p>
+                        <pre><code>```mermaid
+graph LR
+    A --> B
+```</code></pre>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How to zoom in on Mermaid diagrams?</div>
+                    <div class="faq-answer">A: Hover over the diagram and click the "🔍 Zoom" button that appears in the top right corner.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What types of Mermaid diagrams are supported?</div>
+                    <div class="faq-answer">A: Supports flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, pie charts, and all standard Mermaid diagram types.</div>
+                </div>
+
+                <h3>Math Formulas</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How to insert math formulas?</div>
+                    <div class="faq-answer">
+                        <p>Inline formula: <code>$E = mc^2$</code></p>
+                        <p>Block formula:</p>
+                        <pre><code>$$
+\int_{a}^{b} f(x) dx
+$$</code></pre>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: What LaTeX syntax is supported?</div>
+                    <div class="faq-answer">A: Supports standard LaTeX math syntax, rendered using KaTeX engine.</div>
+                </div>
+
+                <h3>File Search</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How to search files?</div>
+                    <div class="faq-answer">
+                        <p>Enter keywords in the search box at the top of the left sidebar. You can choose the search scope:</p>
+                        <ul style="margin-left: 20px;">
+                            <li>Filename: Search filenames only</li>
+                            <li>Content: Search file content only</li>
+                            <li>Filename and Content: Full-text search</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Image Handling</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: How to insert images?</div>
+                    <div class="faq-answer">
+                        <ol style="margin-left: 20px;">
+                            <li>Drag and drop images to the editor</li>
+                            <li>Use menu "Insert" > "Image"</li>
+                            <li>Use Markdown syntax: <code>![description](image-path)</code></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <h2>🔧 Troubleshooting</h2>
+
+                <h3>App Won't Start</h3>
+                <p><strong>Symptom:</strong> No response after double-clicking the app icon</p>
+                <p><strong>Solution:</strong></p>
+                <ol>
+                    <li>Check if macOS version meets requirements (macOS 13.0+)</li>
+                    <li>Try reinstalling the app</li>
+                    <li>Check Console logs (Applications > Utilities > Console)</li>
+                </ol>
+
+                <h3>Cannot Add Folder</h3>
+                <p><strong>Symptom:</strong> Unable to select folder after clicking "Add Folder"</p>
+                <p><strong>Solution:</strong></p>
+                <ol>
+                    <li>Ensure you have read permissions for the folder</li>
+                    <li>Try selecting a different folder</li>
+                    <li>Restart the app and retry</li>
+                </ol>
+
+                <h2>📚 Tips &amp; Tricks</h2>
+
+                <h3>Keyboard Shortcuts</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Function</th>
+                            <th>Shortcut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>New Document</td><td>⌘ + N</td></tr>
+                        <tr><td>Open File</td><td>⌘ + O</td></tr>
+                        <tr><td>Save</td><td>⌘ + S</td></tr>
+                        <tr><td>Export</td><td>⌘ + E</td></tr>
+                        <tr><td>Search</td><td>⌘ + F</td></tr>
+                        <tr><td>Refresh File Tree</td><td>⌘ + R</td></tr>
+                        <tr><td>Toggle Mode</td><td>⌘ + \</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Markdown Syntax Quick Reference</h3>
+                <pre><code># Header 1
+## Header 2
+### Header 3
+
+**Bold** or __Bold__
+*Italic* or _Italic_
+~~Strikethrough~~
+
+- Unordered list
+- Item 2
+
+1. Ordered list
+2. Item 2
+
+[Link text](https://example.com)
+![Image description](image-path)
+
+`Inline code`
+
+> Quote text
+
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell     | Cell     |</code></pre>
+
+                <h2>🔄 Version Info</h2>
+                <p><strong>Current Version:</strong> 1.0.0 (2026-07-21)</p>
+
+                <p><strong>Key Features:</strong></p>
+                <div>
+                    <span class="feature-badge">✨ Mermaid Diagrams</span>
+                    <span class="feature-badge">✨ Dual Mode</span>
+                    <span class="feature-badge">✨ Smart Search</span>
+                    <span class="feature-badge">✨ Math Formulas</span>
+                    <span class="feature-badge">✨ Code Highlighting</span>
+                    <span class="feature-badge">🔒 Local Storage</span>
+                    <span class="feature-badge">🚀 No Network</span>
+                </div>
+
+                <h2>📋 System Requirements</h2>
+                <ul>
+                    <li><strong>OS:</strong> macOS 13.0 (Ventura) or later</li>
+                    <li><strong>Processor:</strong> Apple Silicon (M1/M2/M3) or Intel</li>
+                    <li><strong>Memory:</strong> Minimum 4GB RAM (8GB recommended)</li>
+                    <li><strong>Disk Space:</strong> Approximately 50MB</li>
+                </ul>
+
+                <h2>🌐 Online Resources</h2>
+                <ul>
+                    <li><strong>Project Homepage:</strong> <a href="https://github.com/jiangfuqiang/OnlyMarkdown" target="_blank">https://github.com/jiangfuqiang/OnlyMarkdown</a></li>
+                    <li><strong>Markdown Guide:</strong> <a href="https://www.markdownguide.org/" target="_blank">https://www.markdownguide.org/</a></li>
+                    <li><strong>Mermaid Documentation:</strong> <a href="https://mermaid.js.org/" target="_blank">https://mermaid.js.org/</a></li>
+                    <li><strong>LaTeX Math Symbols:</strong> <a href="https://katex.org/docs/supported.html" target="_blank">https://katex.org/docs/supported.html</a></li>
+                </ul>
+
+                <h2>📧 Feedback</h2>
+                <p>Your feedback is very important to us! If you have any suggestions or ideas:</p>
+                <ol>
+                    <li>Create an Issue on GitHub</li>
+                    <li>Email <a href="mailto:jiangfuqiang24@gmail.com">jiangfuqiang24@gmail.com</a></li>
+                    <li>Leave a review on the App Store</li>
+                </ol>
+                <p style="text-align: center; margin-top: 30px; font-size: 1.2em; color: #667eea;"><strong>Thank you for using MarkdownMe!</strong></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Last Updated: July 21, 2026</strong></p>
+            <p>&copy; 2026 MarkdownMe. All rights reserved.</p>
+            <p>
+                <a href="https://github.com/jiangfuqiang/OnlyMarkdown" target="_blank">GitHub</a> |
+                <a href="mailto:jiangfuqiang24@gmail.com">Email</a> |
+                <a href="onlymarkdown_privacy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.language-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('content-' + lang).classList.add('active');
+            document.querySelectorAll('.language-switcher button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + lang).classList.add('active');
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang && savedLang === 'en') {
+                switchLanguage('en');
+            }
+        });
+    </script>
+</body>
+</html>
