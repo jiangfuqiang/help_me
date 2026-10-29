@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: /tingdu-support.html
+---
+
 # 听读英语技术支持
 
 听读英语支持拍摄或导入英语课文，识别并编辑文字，再按句听读。应用支持 iPhone 和 iPad，要求 iOS 或 iPadOS 17 及以上。

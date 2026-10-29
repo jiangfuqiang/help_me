@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: /tingdu-privacy.html
+---
+
 # 听读英语隐私政策
 
 更新日期：2026 年 10 月 29 日
